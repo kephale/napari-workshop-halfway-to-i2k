@@ -1,27 +1,34 @@
-# napari-workshop-template
+# One of the two napari workshops at Halfway to I2K
 
-A JupyterBook template for napari workshops.
+This year we have 2 workshops at Halfway to I2K:
+- this one, and
+- https://github.com/jni/halfway-to-i2k-skimage-napari/
 
-**To see the built website, go to
-https://<your_github_username>.github.io/napari-workshop-template**. For
-example, see this template [here](https://napari.org/napari-workshop-template/home.html).
+On the web: **https://kephale.github.io/napari-workshop-halfway-to-i2k/**
 
-**To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/napari/napari-workshop-template/main)** (make sure this link points to your own repository!)
+**To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kephale/napari-workshop-halfway-to-i2k/main)** 
 
-## What is this repository?
+## How to get started
 
-This repository is meant to be [forked](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and edited so that you have a starting point when creating your own napari workshop. All instructions below are meant to be executed _on your own fork_, so that you have a copy of the template that you can adjust to your needs.
+### GUI installation
 
-You can also click the `Use this template` button in the GitHub web interface for this repository:
+1. Download napari as an app (e.g. the 0.4.18 release here: https://github.com/napari/napari/releases/tag/v0.4.18 )
+2. Open napari.
+3. Select `Plugins \ Plugin Manager`.
+4. Install the `napari workshop browser` plugin, and restart napari.
+6. Run this plugin and enter the URL of this workshop's zip file: https://github.com/kephale/napari-halfway-to-i2k/archive/refs/heads/main.zip
+7. Click `Launch workshop`.
 
-![Use this template button on GitHub interface](napari-workshops/docs/images/00-template.png)
+### Non-GUI installation
 
-Once you have created your workshop, if you would like the event to be listed [in napari.org](https://napari.org/stable/further-resources/napari-workshops.html), feel free to submit a pull request to https://github.com/napari/docs
+Follow the instructions on napari.org: https://napari.org/stable/tutorials/fundamentals/installation.html
 
-## Documentation
+## Resources 
 
-To learn more about how to build, publish, share and cite your workshop materials, check the [Build your own workshop section](https://napari.github.io/napari-workshop-template/docs/build_your_workshop.html).
+- https://napari.org
+- https://napari-hub.org
+- https://forum.image.sc
 
 ## Contributing to this repository
 
-If you find typos, incomplete or misleading instructions, or have suggestions for improvements to this template, open an issue at the napari/napari-workshop-template repo.
+If you find typos, incomplete or misleading instructions, or have suggestions for improvements to this template, open an issue at the kephale/napari-workshop-halfway-to-i2k repo.
