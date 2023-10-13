@@ -14,7 +14,7 @@ For this workshop, we recommend the bundle app installation for anyone who is un
 
 ## napari Bundled App Installation
 The simplest way to install napari is as a bundled app. You can download the installer by visiting the [napari releases page](https://github.com/napari/napari/releases) and downloading the file that corresponds to your operating system and processor from the assets section at the bottom of the release notes.
-![bundled app](resources/bundled.png)
+![bundled app](resources/bundle.png)
 
 - For Windows: `napari-0.4.18-Windows-x86_64.exe`
 - For Mac with Intel processor: `napari-0.4.18-macOS-x86_64.pkg`
@@ -100,4 +100,4 @@ OPTIONAL - Try closing and reopening napari.
     ```conda activate napari-env```  
     ```napari```
 
-The next topic in this workshop is [Explore the viewer](intro-to-napari-workshop-guide-2-explore-the-viewer.md).  It should take approximately 15 minutes to complete. 
+The next topic in this workshop is [visualizing data in napari](visualization.md).  It should take approximately 15 minutes to complete. 
