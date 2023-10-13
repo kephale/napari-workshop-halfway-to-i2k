@@ -1,24 +1,15 @@
-# Explore the viewer
+# Visualizing Data in napari
 
 ![Viewer](resources/viewer-with-arrows.png)  
 
-This workshop walks you through the following topics and exercises: 
+This module covers the following topics:
+* [Open an Image](#open-an-image)
+* [Explore Images in 2D and 3D](#explore-images-in-2d-and-3d)  
+* [Explore Stack Manipulation](#explore-stack-manipulation)  
+* [Explore Layer Types](#explore-layer-types)  
+* [Install Your First Plugin](#install-your-first-plugin)
 
-* [Install napari](intro-to-napari-workshop-guide-1-install-napari.md) - 15 minutes
-* This guide (Explore the viewer) - 15 minutes 
-* [Plugins](intro-to-napari-workshop-guide-3-plugins.md) - 15 minutes 
-* [Complete a workflow](intro-to-napari-workshop-guide-4-complete-a-workflow.md) - 15 minutes 
-* [Jupyter notebooks and napari](intro-to-napari-workshop-guide-5-jupyter-notebooks-and-jupyter-lab.md) - 30 minutes
-* [Resources](intro-to-napari-workshop-guide-6-resources.md)
-
-This guide covers the following topics:
-* [Open an image](#open-an-image)
-* [Explore images in 2D and 3D](#explore-images-in-2d-and-3d)  
-* [Explore stack manipulation](#explore-stack-manipulation)  
-* [Explore layer types](#explore-layer-types)  
-* [Install your first plugin](#install-your-first-plugin)
-
-## Open an image
+## Open an Image
   
 * Open a sample image that comes with napari by selecting:  
 **File**>**Open Sample**>**napari**>**Cells (3D + 2Ch)**  
@@ -26,7 +17,7 @@ This guide covers the following topics:
    **Note:** Open one of your own images with:  
 **File** > **Open files** and select a tif, png, or jpg file to open. 
 
-## Explore images in 2D and 3D  
+## Explore Images in 2D and 3D  
 
 * Toggle layers on and off with the **eye button next to the layer name** in the layer list.  
 * Use the dimension sliders beneath the canvas to  control the z position/slice number. Slide through the 3D stack one 2D slice at a time.  
@@ -54,7 +45,7 @@ It is second from the left end on the row of viewer buttons.
 * Move the **nuclei** and **membrane** 3D volumes side by side by toggling the grid mode button. (Fifth button on the lower left bar).
 * Toggle back to 2D mode (Second button on the lower left bar).  
  
-## Adjust image visualization.   
+## Adjust Image Visualization   
 * Select an image from the layers list (selected images are blue in the layer list).  
 * Adjust the contrast limits by control+click(Mac) or right-click(Windows) on the contrast limits slider in the layer controls section  
 ![layer-controls](resources/layer-controls.png)  
@@ -76,7 +67,7 @@ in the integrated console.
 * Add physical units of microns to the scale bar by typing `viewer.scale_bar.unit = "um"`  
 in the integrated console.
 
-## Explore stack manipulation  
+## Explore Stack Manipulation  
 * Select both the _nuclei_ and _membrane_ layers in the layer list using **shift**+click.  
 * Control+click(Mac)/right-click(Windows) either of the selected layers to open the layer actions menu.  
     * Click **Link Layers** to be able to control layers properties of both layers using the layer control panel.  
@@ -96,7 +87,7 @@ in the integrated console.
 
          **Note:** **Split Stack** divides a layer in its first listed dimension (proper metadata will have [channel, z, y, x]), so selecting the newly merged layer will separate the channels into separate layers, and applying **Split Stack** to one of the resulting layers will split the layer into a set of 2D layers for each of the z slices. (Error for **linear** interpolation.)
          
-## Explore layer types  
+## Explore Layer Types  
 * Add a points, shapes, or labels layer using the buttons above the layers list.
     * These layers will be blank to begin with.  
     * In 2D mode, use the layer controls to add points, draw shapes, or color on your image (referring to points, shapes, and labels layers respectively).  
@@ -104,7 +95,7 @@ in the integrated console.
       **Note:** These layers can be used for annotation of images.  
 * Delete all layers in the layer list by selecting one layer, and then pressing Command+A(Mac) / Control+A(Windows) to select all layers. Then click the trash can button on the top right of the layer list. 
 
-## Install your first plugin  
+## Install Your First Plugin  
 * Navigate to napari-hub.org - this is the platform to discover and share plugins.  
 * Search for **sample:**.
 * Scroll down until you see **napari-bio-sample-data**.  
@@ -133,4 +124,4 @@ and wait for the plugin list to populate.
     
     * Delete all layers in the layer list using the trash can button on the top right of the layer list.  
 
-The next guide in this workshop is [Plugins](intro-to-napari-workshop-guide-3-plugins.md). It takes about 15 minutes to complete. 
+The next module in this workshop is [Plugins](plugins.md). It takes about 15 minutes to complete. 
