@@ -14,7 +14,7 @@ To learn about updates from the napari-hub team, sign up for the quarterly newsl
 ## Install Plugins
 * To install plugins, we recommend:  
     * Opening **Plugins**>**Install/Uninstall Plugins** in the napari menu
-    * **_Waiting for the plugin list to populate_**
+    * **_Waiting for the plugin list to populate_** - this may take a few moments
     * Searching for the desired plugin in the **Search for a plugin by keyword or author** search bar
     * Clicking the install button  
 
