@@ -48,7 +48,6 @@ It is second from the left end on the row of viewer buttons.
 ## Adjust Image Visualization   
 * Select an image from the layers list (selected images are blue in the layer list).  
 * Adjust the contrast limits by control+click(Mac) or right-click(Windows) on the contrast limits slider in the layer controls section  
-![layer-controls](resources/layer-controls.png)  
  to open the expanded view with min and max pixel values labeled on the ends of the slider.  
 * Adjust opacity, color map, and blending  in the layer controls menu.  
 * Open the integrated console with the first button on the row of the viewer control buttons.  
@@ -85,7 +84,7 @@ in the integrated console.
     * Explore the data using the sliders.  
     * Open the layer action menu and split the stacks with the **Split Stack** command.  
 
-         **Note:** **Split Stack** divides a layer in its first listed dimension (proper metadata will have [channel, z, y, x]), so selecting the newly merged layer will separate the channels into separate layers, and applying **Split Stack** to one of the resulting layers will split the layer into a set of 2D layers for each of the z slices. (Error for **linear** interpolation.)
+         **Note:** **Split Stack** divides a layer in its first listed dimension (proper metadata will have [channel, z, y, x]), so selecting the newly merged layer will separate the channels into separate layers, and applying **Split Stack** to one of the resulting layers will split the layer into a set of 2D layers for each of the z slices. (You cannot split the stack when interpolation is set to **linear**.)
          
 ## Explore Layer Types  
 * Add a points, shapes, or labels layer using the buttons above the layers list.
