@@ -3,7 +3,7 @@
 This module covers the following:
 
 * [Installing napari as a Bundled App](#napari-bundled-app-installation)
-* [Installing napari as a Python Package]
+* [Installing napari as a Python Package](#napari-python-package-installation)
   * [Install an environment manager](#install-an-environment-manager)
   * [Create an environment](#create-an-environment)
   * [Enter or activate the environment](#enter-or-activate-the-environment)
@@ -13,7 +13,9 @@ This module covers the following:
 For this workshop, we recommend the bundle app installation for anyone who is unfamiliar with using terminal.
 
 ## napari Bundled App Installation
-The simplest way to install napari is as a bundled app. You can download the installer by visiting the [napari releases page](https://github.com/napari/napari/releases) and downloading the file that corresponds to your operating system and processor.
+The simplest way to install napari is as a bundled app. You can download the installer by visiting the [napari releases page](https://github.com/napari/napari/releases) and downloading the file that corresponds to your operating system and processor from the assets section at the bottom of the release notes.
+![bundled app](resources/bundled.png)
+
 - For Windows: `napari-0.4.18-Windows-x86_64.exe`
 - For Mac with Intel processor: `napari-0.4.18-macOS-x86_64.pkg`
 - For Mac with M1 ("Apple silicon"): `napari-0.4.18-macOS-arm64.pkg`
@@ -68,10 +70,10 @@ Type one of the following commands on the terminal (Mac) or at the Anaconda Prom
 * Recommended command: 
 
   ```bash
-  conda install -c conda-forge napari=0.4.17
+  conda install -c conda-forge napari=0.4.18
   ```
 
-   **Note:** 0.4.17 can be replaced with any desired version of napari.
+   **Note:** 0.4.18 can be replaced with any desired version of napari.
 
 * Alternative command if the above fails:
     ```bash
