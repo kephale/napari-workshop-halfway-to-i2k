@@ -4,7 +4,9 @@
 format: jb-book
 root: home
 chapters:
-- file: docs/build_your_workshop
+- file: install
+- file: visualization
+- file: plugins
   sections:
   - file: docs/deployment_guide
   - file: docs/launching_binder
