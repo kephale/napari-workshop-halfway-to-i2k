@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Introduction to animation with Napari
+# Introduction to animation with napari
 
 +++
 
