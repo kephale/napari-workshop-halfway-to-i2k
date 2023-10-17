@@ -19,7 +19,7 @@ On the web: **https://kephale.github.io/napari-workshop-halfway-to-i2k/**
 2. Open napari.
 3. Select `Plugins \ Plugin Manager`.
 4. Install the `napari workshop browser` plugin, and restart napari.
-6. Run this plugin and enter the URL of this workshop's zip file: https://github.com/kephale/napari-halfway-to-i2k/archive/refs/heads/main.zip
+6. Run this plugin and enter the URL of this workshop's zip file: https://github.com/kephale/napari-workshop-halfway-to-i2k/archive/refs/heads/main.zip
 7. Click `Launch workshop`.
 
 ### Non-GUI installation
