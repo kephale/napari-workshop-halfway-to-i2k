@@ -7,13 +7,11 @@ chapters:
 - file: install
 - file: visualization
 - file: plugins
-  sections:
-  - file: docs/deployment_guide
-  - file: docs/launching_binder
 - file: getting_started
   sections:
   - file: installation
   - file: notebook_setup
+  - file: docs/launching_binder
 - file: notebooks/index
   sections:
   - file: notebooks/intro_bioimage_visualization
