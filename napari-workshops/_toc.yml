@@ -9,6 +9,7 @@ chapters:
 - file: plugins
 - file: getting_started
   sections:
+  - file: bundled_app_setup.md
   - file: installation
   - file: notebook_setup
   - file: docs/launching_binder
