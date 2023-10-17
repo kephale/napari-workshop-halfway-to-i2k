@@ -1,13 +1,15 @@
 # One of the two napari workshops at Halfway to I2K
 
+The workshop hosted in this repository will happen on October 19 at noon-2p Eastern Time.
+
+On the web: **https://kephale.github.io/napari-workshop-halfway-to-i2k/**
+
+## Two napari workshops this year!
+
 This year we have 2 workshops at Halfway to I2K:
 
 - this one, and
 - https://github.com/jni/halfway-to-i2k-skimage-napari/
-
-The workshop hosted in this repository will happen on October 19 at noon-2p Eastern Time.
-
-On the web: **https://kephale.github.io/napari-workshop-halfway-to-i2k/**
 
 **To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kephale/napari-workshop-halfway-to-i2k/main)** 
 
