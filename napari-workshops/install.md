@@ -9,6 +9,8 @@ This module covers the following:
   * [Enter or activate the environment](#enter-or-activate-the-environment)
   * [Install napari](#install-napari)
   * [Open and close napari](#open-and-close-napari)
+ * [Install the Workshop Browser Plugin](#install-the-workshop-broswer-plugin)
+ 
 
 For this workshop, we recommend the bundle app installation for anyone who is unfamiliar with using terminal.
 
@@ -99,5 +101,15 @@ OPTIONAL - Try closing and reopening napari.
     - At the terminal or Anaconda Prompt type:  
     ```conda activate napari-env```  
     ```napari```
+
+## Install the Workshop Browser Plugin
+
+To follow along with this workshop, we recommend you use the Workshop Browser plugin.
+
+1. Select `Plugins > Install/Uninstall Plugins`.
+2. Install the `napari workshop browser` plugin, and restart napari. 
+3. Open the plugin `Plugins > Open a napari workshop (napari-workshop-browswer)
+4. Enter the URL of this workshop's zip file: https://github.com/kephale/napari-workshop-halfway-to-i2k/archive/refs/heads/main.zip
+5. Click `Launch workshop`.
 
 The next topic in this workshop is [visualizing data in napari](visualization.md).  It should take approximately 15 minutes to complete. 
