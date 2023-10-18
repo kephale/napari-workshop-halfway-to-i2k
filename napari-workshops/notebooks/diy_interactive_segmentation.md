@@ -22,7 +22,8 @@ make a custom interactive segmentation tool from scratch.
 
 In this tutorial we will write an interactive segmentation tool and use it on data hosted on [Zebrahub](https://zebrahub.ds.czbiohub.org/).
 
-![image-2.png](attachment:image-2.png)
+![3D volumetric image from zebrahub of a developing zebrafish](resources/zebrahub_volume.png)
+![3D volumetric segmentation of with some of the zebrahub image segmented but not very well](resources/zebrahub_partial_segmentation.png)
 
 +++
 
@@ -84,7 +85,6 @@ LOGGER.addHandler(streamHandler)
 +++
 
 Get data from OpenOrganelle.
-
 
 ```{code-cell} ipython3
 def open_zebrahub():
@@ -162,7 +162,7 @@ features.shape
 
 What do these features we are extracting look like?
 
-![image.png](attachment:image.png)
+![A set of features used for the zebrahub model in this tutorial](resources/zebrahub_features.png)
 
 ```{code-cell} ipython3
 def show_features():
@@ -226,7 +226,7 @@ painting_data.shape
 
 ### Let's make a UI as well
 
-![image.png](attachment:image.png)
+![A UI widget showing controls for feature size and type](resources/diy_interactive_segmentatino_widget.png)
 
 ```{code-cell} ipython3
 from qtpy.QtWidgets import (
@@ -346,7 +346,8 @@ def on_data_change(event, viewer=None, widget=None):
 
     # Training the ML model and generating predictions can take time
     #   we will use a "thread" to perform these calculations
-    #   otherwise napari will freeze until these calculations are done
+    #   otherwise napari will freeze until these
+    calculations are done
     thread = threading.Thread(
         target=threaded_on_data_change,
         args=(
