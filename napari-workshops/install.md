@@ -9,8 +9,10 @@ This module covers the following:
   * [Enter or activate the environment](#enter-or-activate-the-environment)
   * [Install napari](#install-napari)
   * [Open and close napari](#open-and-close-napari)
+ * [Install the Workshop Browser Plugin](#install-the-workshop-browser-plugin)
+ 
 
-For this workshop, we recommend the bundle app installation for anyone who is unfamiliar with using terminal.
+For this workshop, we recommend the bundle app installation for anyone who is unfamiliar with using terminal. Regardless of which installation method you use, we recommend using the [napari workshop browser plugin](https://www.napari-hub.org/plugins/napari-workshop-browser) to complete the rest of the modules.
 
 ## napari Bundled App Installation
 The simplest way to install napari is as a bundled app. You can download the installer by visiting the [napari releases page](https://github.com/napari/napari/releases) and downloading the file that corresponds to your operating system and processor from the assets section at the bottom of the release notes.
@@ -22,6 +24,8 @@ The simplest way to install napari is as a bundled app. You can download the ins
 
 Open the file and follow the instructions in the installer. Once installation is complete, you can open napari by simply double-clicking the application.
 **Note:** napari may take a few minutes to open.
+
+Before continuing, follow the instructions to [install the workshop browser plugin](#install-the-workshop-browser-plugin).
 
 ## napari Python Package Installation
 Although napari has a bundled app, the most stable installation is to install napari as a python package. This installation method requires some work with terminal or command prompt. Follow the steps below, copying and pasting the commands into terminal/command prompt when noted.
@@ -99,5 +103,16 @@ OPTIONAL - Try closing and reopening napari.
     - At the terminal or Anaconda Prompt type:  
     ```conda activate napari-env```  
     ```napari```
+
+## Install the Workshop Browser Plugin
+
+To follow along with this workshop, we recommend you use the Workshop Browser plugin.
+1. Open the napari console using the bottom left, `>_` button.
+2. Paste `pip install git+https://github.com/kephale/napari-workshop-browser.git` and hit enter.
+3. Restart napari to complete installation.
+4. Open the plugin `Plugins > Open a napari workshop (napari-workshop-browswer)`
+5. Erase the default URL and enter the URL of this workshop's zip file: `https://github.com/kephale/napari-workshop-halfway-to-i2k/archive/refs/heads/main.zip`
+6. Click `Launch workshop`.
+7. A local instance of juptyer notebooks should launch with all of the notebooks needed to complete the rest of the modules.
 
 The next topic in this workshop is [visualizing data in napari](visualization.md).  It should take approximately 15 minutes to complete. 
