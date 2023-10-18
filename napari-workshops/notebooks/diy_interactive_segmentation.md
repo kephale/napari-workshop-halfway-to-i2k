@@ -226,7 +226,7 @@ painting_data.shape
 
 ### Let's make a UI as well
 
-![A UI widget showing controls for feature size and type](resources/diy_interactive_segmentatino_widget.png)
+![A UI widget showing controls for feature size and type](resources/diy_interactive_segmentation_widget.png)
 
 ```{code-cell} ipython3
 from qtpy.QtWidgets import (
