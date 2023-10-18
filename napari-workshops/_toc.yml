@@ -20,7 +20,7 @@ chapters:
   - file: notebooks/segmenting_and_measuring_nuclei_stardist
   - file: notebooks/mitonet_segmentation
   - file: notebooks/manual_annotation
-  - file: notebooks/interactive_segmentation
+  - file: notebooks/diy_interactive_segmentation
   - file: notebooks/custom_colormaps
   - file: notebooks/try_animation
 - file: make_a_simple_plugin
