@@ -107,11 +107,12 @@ OPTIONAL - Try closing and reopening napari.
 ## Install the Workshop Browser Plugin
 
 To follow along with this workshop, we recommend you use the Workshop Browser plugin.
-
-1. Select `Plugins > Install/Uninstall Plugins`.
-2. Install the [`napari workshop browser` plugin](https://www.napari-hub.org/plugins/napari-workshop-browser), close napari `napari > Quit napari`, and restart napari. 
-3. Open the plugin `Plugins > Open a napari workshop (napari-workshop-browswer)`
-4. Enter the URL of this workshop's zip file: https://github.com/kephale/napari-workshop-halfway-to-i2k/archive/refs/heads/main.zip
-5. Click `Launch workshop`.
+1. Open the napari console using the bottom left, `>_` button.
+2. Paste `pip install git+https://github.com/kephale/napari-workshop-browser.git` and hit enter.
+3. Restart napari to complete installation.
+4. Open the plugin `Plugins > Open a napari workshop (napari-workshop-browswer)`
+5. Erase the default URL and enter the URL of this workshop's zip file: `https://github.com/kephale/napari-workshop-halfway-to-i2k/archive/refs/heads/main.zip`
+6. Click `Launch workshop`.
+7. A local instance of juptyer notebooks should launch with all of the notebooks needed to complete the rest of the modules.
 
 The next topic in this workshop is [visualizing data in napari](visualization.md).  It should take approximately 15 minutes to complete. 
