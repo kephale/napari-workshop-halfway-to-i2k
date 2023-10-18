@@ -33,6 +33,7 @@ Follow the instructions on napari.org: https://napari.org/stable/tutorials/funda
 - https://napari.org
 - https://napari-hub.org
 - https://forum.image.sc
+- Workshop Slides: https://bit.ly/halfway-to-i2k
 
 ## Contributing to this repository
 
