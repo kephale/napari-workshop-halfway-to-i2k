@@ -31,6 +31,7 @@ if 'BINDER_SERVICE_HOST' in os.environ:
 We need to install some extra libraries and tools for working with remote data and our machine learning tool.
 
 ```{code-cell} ipython3
+:tags: [remove-output]
 # Install extra libraries for supporting remote Zarr data
 
 !pip install s3fs 
