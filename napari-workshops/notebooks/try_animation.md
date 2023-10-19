@@ -98,6 +98,7 @@ print(cropped_label.shape)
 ## Visualize in napari
 
 ```{code-cell} ipython3
+:tags: [remove-output]
 viewer = napari.Viewer()
 viewer.add_image(cropped_img)
 ```
@@ -122,6 +123,8 @@ viewer.add_image(cropped_img)
 ## Use script to record an animation
 
 ```{code-cell} ipython3
+:tags: [remove-output]
+
 # define pathway to save your animation
 save_path = 'my_animation_from_script.mp4'
 ```
@@ -158,7 +161,7 @@ viewer = napari.Viewer(ndisplay=3)
 image_layer = viewer.add_image(cropped_img, name="image", depiction="plane", blending='additive')
 labels_layer = viewer.add_labels(cropped_label, name="labels")
 
-# viewer.camera.angles = (-18.23797054423494, 41.97404742075617, 141.96173085742896)
+viewer.camera.angles = (-18.23797054423494, 41.97404742075617, 141.96173085742896)
 ```
 
 ```{code-cell} ipython3
