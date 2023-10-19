@@ -497,6 +497,105 @@ the napari viewer, and try running the plugin.
 
 Congratulations! You have made your first napari plugin!
 
+## Test upload to PyPI
+
+First, build a *wheel* for your package. A wheel is a pre-compiled version of
+your package that makes installation easy. For a pure-Python package like this
+it's quite simple, but can get a bit more complicated if you want to include a
+compiled code such as a Python C-extension.
+
+We're going to use `build` to build the wheel. This will invoke the
+`build-backend` specified in your `pyproject.toml` and create the wheel.
+
+```bash
+pip install build
+python -m build
+```
+
+This should succeed and put your wheel (.whl file) in the `dist` directory,
+along with a tarball of your source (also called an `sdist`).
+```
+dist
+├── [your-package-name]-0.0.1.tar.gz
+└── [your_package_name]-0.0.1-py3-none-any.whl
+```
+
+```{tip}
+A wheel is just a zip archive. To install it, `pip` (mostly) just unzips it in
+the right spot. You can unzip it yourself to see exactly what is inside.
+```
+
+Now we'll use [`twine`](https://twine.readthedocs.io/en/stable/) to upload your
+package to the [(test) Python Package Index (TestPyPI)](https://test.pypi.org).
+There are a number of ways to upload to PyPI, but twine is nice.
+
+```bash
+pip install twine
+twine upload -r testpypi dist/*
+```
+
+This will prompt for a username/password, but you don't have one! Head over to
+https://test.pypi.org to create an account. This system is entirely separate
+from the "real" PyPI, so you can feel safe uploading test packages, etc.
+
+You also need to make an API token for your account. You can do this on the
+"Account Settings" page.
+![PyPI account settings](./resources/plugin-02.png)
+
+Give the token a name. For your fist project, you need to create a token with
+"Entire account" scope, but you can limit this to just your project after the
+first upload.
+![create PyPI API token](./resources/plugin-03.png)
+
+Conveniently, after making the token PyPI will give you some text to paste into
+a file called `$HOME/.pypirc` that twine will reference. You can also specify
+this info via command line or environment variables. It should look something
+like this:
+```
+# ~/.pypirc
+[testpypi]
+  username = __token__
+  password = pypi-AgENdGVzdC5weX...[kinda long token here]
+```
+
+Now, try to upload again:
+```bash
+twine upload -r testpypi dist/*
+```
+
+It should succeed this time, and show you a message similar to this:
+```
+Uploading distributions to https://test.pypi.org/legacy/
+Uploading napari_testpypi-0.0.1-py3-none-any.whl
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 kB • 00:00 • ?
+
+View at:
+https://test.pypi.org/project/napari-testpypi/0.0.1/
+```
+
+Click the provided link, and you'll see your project page live on TestPyPI!
+This is the main landing page for your package, and you can control much of
+what is shown. Most of it comes from your project README, and some comes from
+the metadata you put in `pyproject.toml`.
+
+![package page on PyPI](./resources/plugin-04.png)
+
+```{note}
+PyPI has a flat namespace, so you need to make sure your project name does not
+conflict with an existing package before uploading.
+```
+
+You can also use twine to upload to the *real* PyPI of course, just use `-r
+pypi` (or leave this off). You will need to create a separate account at
+https://pypi.org, and generate and provide a different API token.
+
+After publishing to PyPI, the napari plugin browser and napari-hub will index
+your plugin automatically after 5 minutes or so. We recommend additionally
+distributing your plugin package via [`conda-forge`](https://conda-forge.org/),
+but will not cover the specifics here. In short, adding a package to
+conda-forge is accomplished by creating a pull request to the conda-forge
+"staged recipes" repository. Be on the lookout for GitHub notifications,
+because you might find someone else has done this step for you!
 
 ## Bonus exercises
 
