@@ -15,7 +15,7 @@ kernelspec:
 
 The dataset we will use is https://openorganelle.janelia.org/datasets/jrc_mus-kidney.
 
-We will need to install this empanada-napari plugin https://empanada.readthedocs.io/en/latest/empanada-napari.html.
+We will need to install the empanada-napari plugin https://empanada.readthedocs.io/en/latest/empanada-napari.html.
 
 ## Setup
 
@@ -32,15 +32,16 @@ We need to install some extra libraries and tools for working with remote data a
 
 ```{code-cell} ipython3
 :tags: [remove-output]
-# Install extra libraries for supporting remote Zarr data
+# Install extra libraries.
+# This code has to be executed only once in a given environment.
+# No problem if you execute it again though, Python will just tell you 'Requirement already satisfied'.
 
 !pip install s3fs 
-
 !pip install --upgrade urllib3
+!pip install seaborn
 
+# and here we install the plugin itself (click-free)
 !pip install empanada-napari
-
-# No problem if you execute it again though, Python will just tell you 'Requirement already satisfied'.
 ```
 
 We start by importing `napari`, our `nbscreenshot` utility and instantiating an empty viewer.
@@ -51,7 +52,10 @@ import dask.array as da
 
 import napari
 from napari.utils import nbscreenshot
+```
 
+Now, let's create an empty viewer:
+```
 # Create an empty viewer
 viewer = napari.Viewer()
 ```
@@ -117,9 +121,9 @@ viewer.window.add_dock_widget(widget, name="empanada")
 
 Enter the parameters:
 
-- Set `Model` to `MitoNet_v1_mini`
-- Set `Image Downscaling` to 4 (you can play with this later)
-- Uncheck `Use quantized model`
+- Set `Model` to `MitoNet_V1`
+- Set `Image Downscaling` to 2 (you can play with this later)
+- Set `Fine boundaries`
 - If you have a NVidia GPU, then you can try to select `Use GPU` but that is not necessary
 
 You should get an output like the following:
@@ -250,7 +254,7 @@ Now, you can repeat the quantification and visualization of regions:
 ```{code-cell} ipython3
 # measurement
 rp_dict_sel = regionprops_table(
-    mito_labels,
+    selected_labels,
     properties=('label','area', 'perimeter')
 )
 
