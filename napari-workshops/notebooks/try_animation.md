@@ -41,6 +41,7 @@ if 'BINDER_SERVICE_HOST' in os.environ:
 ```
 
 ```{code-cell} ipython3
+:tags: [remove-output]
 # Instal animation plugin
 # This step has to be performed only once in a given environment.
 # You can remove this cell or use '#' to comment the code out after a successful installation.
@@ -83,19 +84,15 @@ label_data = [
 ]
 ```
 
-```{code-cell} ipython3
-ddata[3].shape
-```
-
 Get an example cube of the data and load it into memory.
 
 ```{code-cell} ipython3
 cropped_img = img_data[3][50:150:2,400:500,1000:1100].compute()
-cropped_img.shape
+print(cropped_img.shape)
 
 # Note that the segmentations are downsampled by 2, so we need to use a different scale for labels
 cropped_label = label_data[2][50:150:2,400:500,1000:1100].compute()
-cropped_img.shape
+print(cropped_label.shape)
 ```
 
 ## Visualize in napari
@@ -150,39 +147,22 @@ animation.capture_keyframe(steps=70)
 animation.animate(save_path, canvas_only=True, fps=24)
 ```
 
-```{code-cell} ipython3
-label_data[2][50:150:2,400:500,1000:1100].shape
-```
-
-```{code-cell} ipython3
-img_data[3][50:150:2,400:500,1000:1100].shape
-```
-
 ## Script from the community
 
 Check out this demo from the community that was collaboratively developed on the by Callum Tromans-Coia, Lorenzo Gaifas, and Alister Burt. For more details see https://forum.image.sc/t/creating-an-animation-for-visualisation-of-3d-labels-emerging-from-a-2d-plane/77517/6.
 
+
 ```{code-cell} ipython3
 viewer = napari.Viewer(ndisplay=3)
-
-# nuclei = skimage.data.cells3d()[:,1,...]
-# denoised = scipy.ndimage.median_filter(nuclei, size=3)
-# th_nuclei = denoised > skimage.filters.threshold_li(denoised)
-# th_nuclei = skimage.morphology.remove_small_holes(th_nuclei, 20**3)
-# labels_data = skimage.measure.label(th_nuclei)
-
-animation = Animation(viewer)
 
 image_layer = viewer.add_image(cropped_img, name="image", depiction="plane", blending='additive')
 labels_layer = viewer.add_labels(cropped_label, name="labels")
 
 # viewer.camera.angles = (-18.23797054423494, 41.97404742075617, 141.96173085742896)
+```
 
-def replace_labels_data():
-    z_cutoff = int(image_layer.plane.position[0])
-    new_labels_data = cropped_label.copy()
-    new_labels_data[z_cutoff:] = 0
-    labels_layer.data = new_labels_data
+```{code-cell} ipython3
+animation = Animation(viewer)
 
 labels_layer.visible = False
 image_layer.plane.position = (0, 0, 0)
@@ -194,6 +174,14 @@ animation.capture_keyframe(steps=30)
 image_layer.plane.position = (0, 0, 0)
 
 animation.capture_keyframe(steps=30)
+
+# define a function to replace label data when viewer position changes
+def replace_labels_data():
+    z_cutoff = int(image_layer.plane.position[0])
+    new_labels_data = cropped_label.copy()
+    new_labels_data[z_cutoff:] = 0
+    labels_layer.data = new_labels_data
+
 
 image_layer.plane.events.position.connect(replace_labels_data)
 labels_layer.visible = True
@@ -210,6 +198,6 @@ animation.capture_keyframe(steps=30)
 image_layer.plane.position = (0, 0, 0)
 animation.capture_keyframe(steps=30)
 
-animation.animate("openorganelle_animation_demo.mp4", canvas_only=True)
+animation.animate("animation_labels.mp4", canvas_only=True)
 image_layer.plane.position = (0, 0, 0)
 ```
